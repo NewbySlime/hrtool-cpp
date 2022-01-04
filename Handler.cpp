@@ -64,6 +64,12 @@ int entrypoint(int argi, char *argcs[]){
     string file1, file2;
     getLineStream(outputFile1, file1);
     getLineStream(outputFile2, file2);
+
+    if(file1[file1.size()-1] == ' ')
+      file1.pop_back();
+    
+    if(file2[file2.size()-1] == ' ')
+      file2.pop_back();
     //outputFile1.getline(buf, 255);
     //outputFile2.getline(buf2, 255);
     if(file1 != file2){
